@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Реестр_космических_аппаратов"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="1000">
     <Grid>
-        <TextBlock Name="info"></TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Row="0" Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path=Callsign}" Width="140" />
+                        <GridViewColumn Header="Дата запуска" DisplayMemberBinding="{Binding Path=Launch}" Width="140"/>
+                        <GridViewColumn Header="Дата приземления" DisplayMemberBinding="{Binding Path=Reentry}" Width="140"/>
+                        <GridViewColumn Header="Дней на орбите" DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="140"/>
+                        <GridViewColumn Header="Количество человек на борту" DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="190"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock Grid.Row="1" Name="info"></TextBlock>
     </Grid>
 </Window>

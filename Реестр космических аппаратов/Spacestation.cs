@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace Реестр_космических_аппаратов
 {
-        public class Spacestation
+        public class Spacestation:Spaceobject
         {
-            private string _Callsign;
+            
             private int _Crew;
-            private int _Launch;
-            private int _Reentry;
-            private int _Daysinorbit;
+           
 
-            public string Callsign
-            {
-                get { return _Callsign; }
-                set { _Callsign = value; }
-            }
+           
 
             public int Crew
             {
@@ -26,37 +20,14 @@ namespace Реестр_космических_аппаратов
                 set { _Crew = value; }
             }
 
-            public int Launch
+            public Spacestation(string ca, int cr, int la, int re, int da):base(ca,la,re,da)
             {
-                get { return _Launch; }
-                set { _Launch = value; }
-            }
-            public int Reentry
-            {
-                get { return _Reentry; }
-                set { _Reentry = value; }
-            }
-
-            public int Daysinorbit
-            {
-                get { return _Daysinorbit; }
-                set { _Daysinorbit = value; }
-            }
-
-
-
-            public Spacestation(string ca, int cr, int la, int re, int da)
-            {
-                Callsign = ca;
                 Crew = cr;
-                Launch = la;
-                Reentry = re;
-                Daysinorbit = da;
             }
 
             public void show(MainWindow wnd)
             {
-                wnd.info.Text += "Космическая станция: " + Callsign + "\n";
+                wnd.info.Text += "Название: " + Callsign + "\n";
                 wnd.info.Text += "Колличество человек на борту: " + Crew + "\n";
                 wnd.info.Text += "Дата запуска: " + Launch + "\n";
                 wnd.info.Text += "Дата посадки: " + Reentry + "\n";
