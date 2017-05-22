@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Реестр_космических_аппаратов
-{
+{ [Serializable]
    public class Spaceobject
     {
         private string _Callsign;

@@ -1,0 +1,26 @@
+﻿<Page x:Class="Реестр_космических_аппаратов.Таблица_космических_станций"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Реестр_космических_аппаратов"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="Таблица_космических_станций">
+
+    <Grid>
+        <ListView  >
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path=Callsign}" Width="140" />
+                        <GridViewColumn Header="Дата запуска" DisplayMemberBinding="{Binding Path=Launch}" Width="140"/>
+                        <GridViewColumn Header="Дата приземления" DisplayMemberBinding="{Binding Path=Reentry}" Width="140"/>
+                        <GridViewColumn Header="Дней на орбите" DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="140" />
+                        <GridViewColumn Header="Количество человек на борту " DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="240" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>
