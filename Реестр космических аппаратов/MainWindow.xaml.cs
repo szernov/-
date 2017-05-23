@@ -20,12 +20,12 @@ namespace Реестр_космических_аппаратов
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    { public List<Spaceobject> spaceObjets = new List<Spaceobject>();
+           public  List<Sputnik> sputniks = new List<Sputnik>();
+           public List<Spacestation> spacestation = new List<Spacestation>();
         public MainWindow()
         {
-            List<Spaceobject> spaceObjets = new List<Spaceobject>();
-            List<Sputnik> sputniks = new List<Sputnik>();
-            List<Spacestation> spacestation = new List<Spacestation>();
+            
 
             InitializeComponent();
 
@@ -60,12 +60,18 @@ namespace Реестр_космических_аппаратов
 
         private void buttonsputnik_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Таблица_спутников();
+            Main.Content = new Sputnik_table(this);
         }
 
         private void buttonspacestation_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Таблица_космических_станций();
+            Main.Content = new Spacestation_table(this);
+        }
+
+        private void button_add_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Addobject();
+
         }
     }
 

@@ -55,13 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Addobject.xaml.cs">
+      <DependentUpon>Addobject.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sputnik.cs" />
-    <Compile Include="Таблица космических станций.xaml.cs">
-      <DependentUpon>Таблица космических станций.xaml</DependentUpon>
+    <Compile Include="Spacestation_table.xaml.cs">
+      <DependentUpon>Spacestation_table.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Таблица спутников.xaml.cs">
-      <DependentUpon>Таблица спутников.xaml</DependentUpon>
+    <Compile Include="Sputnik_table.xaml.cs">
+      <DependentUpon>Sputnik_table.xaml</DependentUpon>
     </Compile>
+    <Page Include="Addobject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,11 +83,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Таблица космических станций.xaml">
+    <Page Include="Spacestation_table.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Таблица спутников.xaml">
+    <Page Include="Sputnik_table.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace Реестр_космических_аппаратов
 {
     /// <summary>
-    /// Логика взаимодействия для Таблица_спутников.xaml
+    /// Логика взаимодействия для Spacestation_table.xaml
     /// </summary>
-    public partial class Таблица_спутников : Page
+    public partial class Spacestation_table : Page
     {
-        public Таблица_спутников()
+        MainWindow mw;
+        public Spacestation_table(MainWindow m)
         {
             InitializeComponent();
+            mw = m;
+            foreach (Spacestation st in mw.spacestation)
+            {
+                listviewstation.Items.Add(st);
+            }
+
         }
     }
 }

@@ -16,14 +16,23 @@ using System.Windows.Shapes;
 namespace Реестр_космических_аппаратов
 {
     /// <summary>
-    /// Логика взаимодействия для Таблица_космических_станций.xaml
+    /// Логика взаимодействия для Addobject.xaml
     /// </summary>
-    public partial class Таблица_космических_станций : Page
+    public partial class Addobject : Page
     {
-        public Таблица_космических_станций()
+        public Addobject()
         {
             InitializeComponent();
-           
+            element_type.Items.Add("Спутник");
+            element_type.Items.Add("Космическая станция");
+
+        }
+
+       
+
+        private void Add_button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
