@@ -25,7 +25,14 @@ namespace Реестр_космических_аппаратов
         {
             InitializeComponent();
             mw = m;
-            foreach (Spacestation st in mw.spacestation)
+            Refresh();
+        }
+        public void Refresh()
+        {
+            listviewstation.Items.Clear();
+
+
+            foreach (Spacestation st in mw.spacestations)
             {
                 listviewstation.Items.Add(st);
             }

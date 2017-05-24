@@ -21,10 +21,14 @@ namespace Реестр_космических_аппаратов
             get { return _Launchmass; }
             set { _Launchmass = value; }
         }
-        public Sputnik(string ca, int la, int re, int da, string ro, int lau) : base(ca, la, re, da)
+        public Sputnik(string ca, int la, int re, int da,int ty, string ro, int lau) : base(ca, la, re, da,ty)
         {
             Rocket = ro;
             Launchmass = lau;
+        }
+        public string GetInfo()
+        {
+            return String.Format("Спутник;{0};{1};{2};{3};{4};{5}", Callsign, Launch, Reentry, Daysinorbit, Rocket, Launchmass);
         }
     }
 }

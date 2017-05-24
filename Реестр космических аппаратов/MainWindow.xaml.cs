@@ -22,7 +22,7 @@ namespace Реестр_космических_аппаратов
     public partial class MainWindow : Window
     { public List<Spaceobject> spaceObjets = new List<Spaceobject>();
            public  List<Sputnik> sputniks = new List<Sputnik>();
-           public List<Spacestation> spacestation = new List<Spacestation>();
+           public List<Spacestation> spacestations = new List<Spacestation>();
         public MainWindow()
         {
             
@@ -38,18 +38,18 @@ namespace Реестр_космических_аппаратов
                 while (!sr.EndOfStream)
                 {
                     data = sr.ReadLine().Split(';');
-                    if (data[0] == "Спутник")
+                    if (data[4] == "0")
                     {
-                        Sputnik sp = new Sputnik(data[1], int.Parse(data[2]), int.Parse(data[3]), int.Parse(data[4]), data[5], int.Parse(data[6]));
+                        Sputnik sp = new Sputnik(data[0], int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]),0, data[5], int.Parse(data[6]));
                         spaceObjets.Add(sp);
                         sputniks.Add(sp);
 
                     }
-                    else if (data[0] == "Станция")
+                    else if (data[4] == "1")
                     {
-                        Spacestation st = new Spacestation(data[1], int.Parse(data[2]), int.Parse(data[3]), int.Parse(data[4]), int.Parse(data[5]));
+                        Spacestation st = new Spacestation(data[0], int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[3]),1, int.Parse(data[5]));
                         spaceObjets.Add(st);
-                        spacestation.Add(st);
+                        spacestations.Add(st);
                     }
 
                 }
@@ -70,7 +70,7 @@ namespace Реестр_космических_аппаратов
 
         private void button_add_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Addobject();
+            Main.Content = new Addobject(this);
 
         }
     }

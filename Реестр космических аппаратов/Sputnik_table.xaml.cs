@@ -19,12 +19,21 @@ namespace Реестр_космических_аппаратов
     /// Логика взаимодействия для Таблица_спутников.xaml
     /// </summary>
     public partial class Sputnik_table : Page
-    {MainWindow mw;
+    {
+        MainWindow mw;
 
         public Sputnik_table(MainWindow w)
         {
             InitializeComponent();
             mw = w;
+            Refresh();
+        }
+
+        public void Refresh()
+        {
+            listviewsputnik.Items.Clear();
+
+
             foreach (Sputnik sp in mw.sputniks)
             {
                 listviewsputnik.Items.Add(sp);

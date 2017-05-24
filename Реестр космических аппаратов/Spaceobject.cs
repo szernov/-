@@ -12,6 +12,8 @@ namespace Реестр_космических_аппаратов
         private int _Launch;
         private int _Reentry;
         private int _Daysinorbit;
+        public int _Type;
+
 
         public string Callsign
         {
@@ -35,12 +37,13 @@ namespace Реестр_космических_аппаратов
             set { _Daysinorbit = value; }
         }
 
-        public Spaceobject(string ca, int la, int re, int da)
+        public Spaceobject(string ca, int la, int re, int da,int ty)
         {
             Callsign = ca;
             Launch = la;
             Reentry = re;
             Daysinorbit = da;
+            _Type = ty;
         }
     }
 }

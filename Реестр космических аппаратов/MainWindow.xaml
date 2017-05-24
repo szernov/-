@@ -10,6 +10,6 @@
         <Frame x:Name="Main" Margin="0,0,10,75"/>
         <Button x:Name="button_sputnik" Content="Архив спутников" HorizontalAlignment="Left" Margin="120,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="buttonsputnik_Click" />
         <Button x:Name="button_spacestation" Content="Архив  станций" HorizontalAlignment="Left" Margin="331,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="buttonspacestation_Click" RenderTransformOrigin="-0.403,0.591"/>
-        <Button x:Name="button_add" Content="Добавить" HorizontalAlignment="Left" Margin="555,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="button_add_Click" RenderTransformOrigin="-0.403,0.591"/>
+        <Button x:Name="button_add" Content="Страница добавления" HorizontalAlignment="Left" Margin="555,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="button_add_Click" RenderTransformOrigin="-0.403,0.591"/>
     </Grid>
 </Window>

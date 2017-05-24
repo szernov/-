@@ -19,7 +19,7 @@ namespace Реестр_космических_аппаратов
                 set { _Crew = value; }
             }
 
-            public Spacestation(string ca, int la, int re, int da, int cr):base(ca,la,re,da)
+            public Spacestation(string ca, int la, int re, int da,int ty, int cr):base(ca,la,re,da,ty)
             {
                 Crew = cr;
             }
