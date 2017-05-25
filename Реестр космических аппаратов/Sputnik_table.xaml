@@ -16,11 +16,12 @@
                         <GridViewColumn Header="Дата запуска" DisplayMemberBinding="{Binding Path=Launch}" Width="150"/>
                         <GridViewColumn Header="Дата приземления" DisplayMemberBinding="{Binding Path=Reentry}" Width="150"/>
                         <GridViewColumn Header="Дней на орбите" DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="150" />
-                        <GridViewColumn Header="Ракетоноситель" DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="150" />
-                        <GridViewColumn Header="Масса аппарата" DisplayMemberBinding="{Binding Path=Daysinorbit}" Width="150" />
+                        <GridViewColumn Header="Ракетоноситель" DisplayMemberBinding="{Binding Path=Rocket}" Width="150" />
+                        <GridViewColumn Header="Масса аппарата" DisplayMemberBinding="{Binding Path=Launchmass}" Width="150" />
                     </GridView.Columns>
                 </GridView>
             </ListView.View>
         </ListView>
+        
     </Grid>
 </Page>

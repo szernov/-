@@ -58,6 +58,9 @@
     <Compile Include="Addobject.xaml.cs">
       <DependentUpon>Addobject.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Change.xaml.cs">
+      <DependentUpon>Change.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sputnik.cs" />
     <Compile Include="Spacestation_table.xaml.cs">
       <DependentUpon>Spacestation_table.xaml</DependentUpon>
@@ -66,6 +69,10 @@
       <DependentUpon>Sputnik_table.xaml</DependentUpon>
     </Compile>
     <Page Include="Addobject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Change.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

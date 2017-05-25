@@ -39,5 +39,10 @@ namespace Реестр_космических_аппаратов
                 listviewsputnik.Items.Add(sp);
             }
         }
-    }
-}
+
+      
+            }
+        }
+    
+
+    

@@ -1,4 +1,4 @@
-﻿<Page x:Class="Реестр_космических_аппаратов.Addobject"
+﻿<Page x:Class="Реестр_космических_аппаратов.Change"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,13 +6,13 @@
       xmlns:local="clr-namespace:Реестр_космических_аппаратов"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="380"
-      Title="Addobject">
+      Title="Change">
     <Grid>
         <TextBox x:Name="callsignt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="23,40,0,0" Width="96" Height="26"/>
         <TextBox x:Name="launcht" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="23,100,0,0" Width="96" Height="26"/>
         <TextBox x:Name="reenteryt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="23,160,0,0" Width="96" Height="26"/>
         <TextBox x:Name="daysinorbitt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="23,220,0,0" Width="96" Height="26"/>
-        <Label x:Name="callsign" Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,14,0,0"/>
+        <Label x:Name="callsign" Content="Название изменяемого объекта" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,14,0,0"/>
         <Label x:Name="launch" Content="Дата запуска" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,69,0,0"/>
         <Label x:Name="reentery" Content="Дата приземления" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,132,0,0" RenderTransformOrigin="0.054,0.271"/>
         <Label x:Name="daysinorbit" Content="Дней на орбите" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,194,0,0"/>
@@ -22,12 +22,10 @@
         <Label x:Name="crew" Content="Экипаж" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,14,0,0" Visibility="Collapsed"/>
         <Label x:Name="rocket" Content="Ракета носитель" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,69,0,0" Visibility="Visible" />
         <Label x:Name="launchmass" Content="Масса аппарата" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,132,0,0" Visibility="Visible" />
-        <Button x:Name="AddButton" Content="Добавить элемент" HorizontalAlignment="Left" Margin="236,204,0,0" VerticalAlignment="Top" Width="113" Height="29" Click="AddButton_Click" Visibility="Visible"  />
-        <ComboBox x:Name="ElementType" HorizontalAlignment="Left" Height="28" Margin="23,262,0,0" VerticalAlignment="Top" Width="149" SelectedIndex="0" SelectionChanged="ElementType_SelectionChanged" > 
-        <ComboBoxItem >Спутник</ComboBoxItem>
-        <ComboBoxItem>Станция</ComboBoxItem>
+        <Button x:Name="ChangeElementButton" Content="Изменить элемент" HorizontalAlignment="Left" Margin="236,204,0,0" VerticalAlignment="Top" Width="113" Height="29" Click="ChangeElementButton_Click" Visibility="Visible"  />
+        <ComboBox x:Name="ElementTypeChangePage" HorizontalAlignment="Left" Height="28" Margin="23,262,0,0" VerticalAlignment="Top" Width="149" SelectedIndex="0" SelectionChanged="ElementTypeChangePage_SelectionChanged" >
+            <ComboBoxItem >Спутник</ComboBoxItem>
+            <ComboBoxItem>Станция</ComboBoxItem>
         </ComboBox>
-
     </Grid>
 </Page>
-    

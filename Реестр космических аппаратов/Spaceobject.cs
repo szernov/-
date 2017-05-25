@@ -36,7 +36,12 @@ namespace Реестр_космических_аппаратов
             get { return _Daysinorbit; }
             set { _Daysinorbit = value; }
         }
-
+        public int Type
+        {
+            get { return _Type; }
+            set { _Type = value; }
+        }
+             
         public Spaceobject(string ca, int la, int re, int da,int ty)
         {
             Callsign = ca;

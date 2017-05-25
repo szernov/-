@@ -24,9 +24,12 @@ namespace Реестр_космических_аппаратов
                 Crew = cr;
             }
 
-        
-
+        public string GetInfo()
+        {
+            return String.Format("{0};{1};{2};{3};{4};{5}", Callsign, Launch, Reentry, Daysinorbit, 1, Crew);
         }
+
+    }
     }
 
 

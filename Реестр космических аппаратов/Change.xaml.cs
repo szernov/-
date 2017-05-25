@@ -16,30 +16,39 @@ using System.Windows.Shapes;
 namespace Реестр_космических_аппаратов
 {
     /// <summary>
-    /// Логика взаимодействия для Addobject.xaml
+    /// Логика взаимодействия для Change.xaml
     /// </summary>
-    public partial class Addobject : Page
+    public partial class Change : Page
     {
         MainWindow mw;
-        public Addobject(MainWindow v)
+
+        public Change(MainWindow u)
         {
             InitializeComponent();
-            mw = v;
-
+            mw = u;
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        { try
+        private void ChangeElementButton_Click(object sender, RoutedEventArgs e)
+
+        {
+           int i = 0;
+           int j = 0;
+            try
             {
-                int i = 0;
-                int j = 0;
+
                 foreach (Sputnik sm in mw.sputniks.ToArray())
                 {
                     if (sm.Callsign == callsignt.Text)
                     {
+                        sm.Launch = int.Parse(launcht.Text);
+                        sm.Reentry = int.Parse(reenteryt.Text);
+                        sm.Daysinorbit = int.Parse(daysinorbitt.Text);
+                        sm.Rocket = rockett.Text;
+                        sm.Launchmass = int.Parse(launchmasst.Text);
+                        mw.Write();
+                        mw.Writeser();
                         i += 1;
-                        MessageBox.Show("Объект с таким именем уже существует");
-                        break;
+
                     }
 
 
@@ -49,46 +58,39 @@ namespace Реестр_космических_аппаратов
                 {
                     if (sv.Callsign == callsignt.Text)
                     {
-                        j += 1;
-                        MessageBox.Show("Объект с таким именем уже существует");
-                        break;
+                        sv.Launch = int.Parse(launcht.Text);
+                        sv.Reentry = int.Parse(reenteryt.Text);
+                        sv.Daysinorbit = int.Parse(daysinorbitt.Text);
+                        sv.Crew = int.Parse(crewt.Text);
+                        mw.Write();
+                        mw.Writeser();
+                        j = +1;
+
+
+
 
                     }
                 }
-
-
-
-
-                if (ElementType.SelectedIndex == 0 && i == 0 && j == 0)
+                if (i == 0 && j == 0)
                 {
-                    Sputnik sp = new Sputnik(callsignt.Text, int.Parse(launcht.Text), int.Parse(reenteryt.Text), int.Parse(daysinorbitt.Text), 0, rockett.Text, int.Parse(launchmasst.Text));
-                    mw.sputniks.Add(sp);
-                    mw.Write();
-                    mw.Writeser();
-                }
-                if (ElementType.SelectedIndex == 1 && j == 0 && i == 0)
-                {
-                    Spacestation st = new Spacestation(callsignt.Text, int.Parse(launcht.Text), int.Parse(reenteryt.Text), int.Parse(daysinorbitt.Text), 1, int.Parse(crewt.Text));
-                    mw.spacestations.Add(st);
-                    mw.Write();
-                    mw.Writeser();
+                    MessageBox.Show("Изменяемого объекта нет");
                 }
             }
-
-            catch(Exception b)
-            { MessageBox.Show(b.ToString()); }
-
-
+            catch (Exception a)
+            {
+                MessageBox.Show(a.ToString());
+            }
         }
 
-                    
-        
 
-            
 
-        private void ElementType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+           
+
+
+        private void ElementTypeChangePage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(ElementType.SelectedIndex==0)
+            if (ElementTypeChangePage.SelectedIndex == 0)
             {
                 launchmass.Visibility = Visibility.Visible;
                 rocket.Visibility = Visibility.Visible;
@@ -109,3 +111,4 @@ namespace Реестр_космических_аппаратов
         }
     }
 }
+

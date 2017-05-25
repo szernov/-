@@ -28,7 +28,7 @@ namespace Реестр_космических_аппаратов
         }
         public string GetInfo()
         {
-            return String.Format("Спутник;{0};{1};{2};{3};{4};{5}", Callsign, Launch, Reentry, Daysinorbit, Rocket, Launchmass);
+            return String.Format("{0};{1};{2};{3};{4};{5};{6}", Callsign, Launch, Reentry, Daysinorbit,0, Rocket, Launchmass);
         }
     }
 }

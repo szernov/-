@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Реестр_космических_аппаратов"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="502" Width="820">
     <Grid>
         <Frame x:Name="Main" Margin="0,0,10,75"/>
-        <Button x:Name="button_sputnik" Content="Архив спутников" HorizontalAlignment="Left" Margin="120,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="buttonsputnik_Click" />
-        <Button x:Name="button_spacestation" Content="Архив  станций" HorizontalAlignment="Left" Margin="331,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="buttonspacestation_Click" RenderTransformOrigin="-0.403,0.591"/>
-        <Button x:Name="button_add" Content="Страница добавления" HorizontalAlignment="Left" Margin="555,415,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="button_add_Click" RenderTransformOrigin="-0.403,0.591"/>
+        <Button x:Name="SputnikButton" Content="Архив спутников" HorizontalAlignment="Left" Margin="0,415,0,0" VerticalAlignment="Top" Width="97" Height="44" Click="SputnikButton_Click" />
+        <Button x:Name="SpacestationButton" Content="Архив  станций" HorizontalAlignment="Left" Margin="97,415,0,0" VerticalAlignment="Top" Width="91" Height="44" Click="SpacestationButton_Click" RenderTransformOrigin="-0.403,0.591"/>
+        <Button x:Name="AddButton" Content="Страница добавления" HorizontalAlignment="Left" Margin="188,415,0,0" VerticalAlignment="Top" Width="127" Height="44" Click="AddButton_Click" RenderTransformOrigin="-0.403,0.591"/>
+        <Button x:Name="DeleteButton" Content="Удалить" HorizontalAlignment="Left" Margin="625,439,0,0" VerticalAlignment="Top" Width="67" Height="23" Click="DeleteButton_Click" RenderTransformOrigin="-0.608,0.685"/>
+        <TextBox x:Name="DeleteTextBox" HorizontalAlignment="Left" Height="23" Margin="692,439,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.438,0.302"/>
+        <Label x:Name="DeletLabel" Content="Название удаляемого объекта" HorizontalAlignment="Left" Margin="630,411,-1,0" VerticalAlignment="Top" Width="183" RenderTransformOrigin="1.233,0.962" Height="27"/>
+        <Button x:Name="ChangeButton" Content=" Страница измения" HorizontalAlignment="Left" Margin="315,415,0,0" VerticalAlignment="Top" Width="111" Height="44" RenderTransformOrigin="-0.109,0.502" Click="ChangeButton_Click"/>
+        <Label x:Name="SearchButto" Content="Название искомого объекта" HorizontalAlignment="Left" Margin="460,411,0,0" VerticalAlignment="Top" Width="165"  Height="27" />
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="23" Margin="505,439,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="SearchButton" Content="Поиск" HorizontalAlignment="Left" Margin="426,439,0,0" VerticalAlignment="Top" Width="79" Height="23" Click="SearchButton_Click"/>
+
     </Grid>
 </Window>

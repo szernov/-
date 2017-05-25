@@ -38,5 +38,13 @@ namespace Реестр_космических_аппаратов
             }
 
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            while (listviewstation.SelectedItems.Count > 0)
+            {
+                listviewstation.Items.Remove(listviewstation.SelectedItems[0]);
+            }
+        }
     }
 }
